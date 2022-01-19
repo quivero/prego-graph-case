@@ -1,11 +1,12 @@
 // [START app]
 import express from 'express'
 import { createRequire } from "module";
-import fs from 'fs'
 
-import Graph from 'dot-quiver/src/data-structures/graph/Graph.js'
-import GraphVertex from 'dot-quiver/src/data-structures/graph/GraphVertex.js'
-import GraphEdge from 'dot-quiver/src/data-structures/graph/GraphEdge.js'
+import Iter from 'es-iter';
+
+import Graph from 'dot-quiver/data-structures/graph/Graph.js'
+import GraphVertex from 'dot-quiver/data-structures/graph/GraphVertex.js'
+import GraphEdge from 'dot-quiver/data-structures/graph/GraphEdge.js'
 
 const require = createRequire(import.meta.url);
 const app = express();
@@ -23,34 +24,32 @@ app.listen(PORT, () => {
 });
 
 app.get('/', (req, res) => {
-  // Driver program
-  // Create a sample graph
-  
+    // Driver program
+    // Create a sample graph
+      
+    // A directed graph
+    let graph_ = new Graph(true);
+
+    // Nodes
+    let A = new GraphVertex('A');
+    let B = new GraphVertex('B');
+    let C = new GraphVertex('C');
+    let D = new GraphVertex('D');
+    let E = new GraphVertex('E');
+    let F = new GraphVertex('F');
+
+    // Vertices
+    let AB = new GraphEdge(A, B);
+    let BC = new GraphEdge(B, C);
+    let CD = new GraphEdge(C, D);
+    let CE = new GraphEdge(C, E);
+    let EB = new GraphEdge(E, B);
+    let CF = new GraphEdge(C, F);
+    let FB = new GraphEdge(F, B);
+
+    // Add edges
+    graph_.addEdges([AB, BC, CD, CE, EB, CF, FB]);
     
-  // A directed graph
-  let graph_ = new Graph(true);
-
-  // Nodes
-  let A = new GraphVertex('A');
-  let B = new GraphVertex('B');
-  let C = new GraphVertex('C');
-  let D = new GraphVertex('D');
-  let E = new GraphVertex('E');
-  let F = new GraphVertex('F');
-
-  // Vertices
-  let AB = new GraphEdge(A, B);
-  let BC = new GraphEdge(B, C);
-  let CD = new GraphEdge(C, D);
-  let CE = new GraphEdge(C, E);
-  let EB = new GraphEdge(E, B);
-  let CF = new GraphEdge(C, F);
-  let FB = new GraphEdge(F, B);
-
-  // Add edges
-  graph_.addEdges([AB, BC, CD, CE, EB, CF, FB]);
-
-  res.send(graph_.describe());
-  
+    res.send(graph_.describe());
 });
 // [END app]

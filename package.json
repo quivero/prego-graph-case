@@ -12,7 +12,8 @@
   "author": "@brunolnetto",
   "license": "MIT",
   "dependencies": {
-    "dot-quiver": "^3.0.1",
+    "dot-quiver": "^4.0.0",
+    "es-iter": "^1.1.2",
     "express": "^4.17.2",
     "fs": "^0.0.1-security",
     "nodemon": "^2.0.15"
