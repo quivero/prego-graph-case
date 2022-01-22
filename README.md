@@ -1,4 +1,4 @@
-# Library ```dot-quiver``` use case
+# Use case for Library ```dot-quiver```
 
 This an use case of library [dot-quiver](https://github.com/brunolnetto/dot-quiver). It is a NodeJS application. Hence, to start it, you might:
 
