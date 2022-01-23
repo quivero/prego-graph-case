@@ -32,7 +32,7 @@ The result rendering depends of browser. Either browser choice, the result must 
             5
         ],
         "3":[
-            
+
         ],
         "4":[
             1
