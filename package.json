@@ -7,6 +7,7 @@
   "scripts": {
     "start": "nodemon index.js",
     "lint": "npx eslint .",
+    "nibble": "npx eslint-nibble .",
     "test": "echo \"Error: no test specified\" && exit 1",
     "update": "npm i -g npm-check-updates && ncu -u && npm update && git add . && git commit -m 'config/ package.json' && git push"
   },
