@@ -1,19 +1,17 @@
 // [START app]
-import express from 'express'
-import { createRequire } from "module";
+import express from 'express';
+import { createRequire } from 'module';
 
-import Iter from 'es-iter';
-
-import Graph from 'dot-quiver/data-structures/graph/Graph.js'
-import GraphVertex from 'dot-quiver/data-structures/graph/GraphVertex.js'
-import GraphEdge from 'dot-quiver/data-structures/graph/GraphEdge.js'
+import Graph from 'dot-quiver/data-structures/graph/Graph.js';
+import { createVertices } from 'dot-quiver/data-structures/graph/GraphVertex.js';
+import { createEdges } from 'dot-quiver/data-structures/graph/GraphEdge.js';
 
 const require = createRequire(import.meta.url);
 const app = express();
 
 // [START enable_parser]
 // This middleware is available in Express v4.16.0 onwards
-app.use(express.json({extended: true}));
+app.use(express.json({ extended: true }));
 // [END enable_parser]
 
 // Listen to the App Engine-specified port, or 8080 otherwise
@@ -24,32 +22,22 @@ app.listen(PORT, () => {
 });
 
 app.get('/', (req, res) => {
-    // Driver program
-    // Create a sample graph
-      
-    // A directed graph
-    let graph_ = new Graph(true);
+  // Driver program
+  // Create a sample graph
 
-    // Nodes
-    let A = new GraphVertex('A');
-    let B = new GraphVertex('B');
-    let C = new GraphVertex('C');
-    let D = new GraphVertex('D');
-    let E = new GraphVertex('E');
-    let F = new GraphVertex('F');
+  // A directed graph
+  const graph_ = new Graph(true);
 
-    // Vertices
-    let AB = new GraphEdge(A, B);
-    let BC = new GraphEdge(B, C);
-    let CD = new GraphEdge(C, D);
-    let CE = new GraphEdge(C, E);
-    let EB = new GraphEdge(E, B);
-    let CF = new GraphEdge(C, F);
-    let FB = new GraphEdge(F, B);
+  // Nodes
+  const node_labels = ['A', 'B', 'C', 'D', 'E', 'F'];
+  const [A, B, C, D, E, F] = createVertices(node_labels);
 
-    // Add edges
-    graph_.addEdges([AB, BC, CD, CE, EB, CF, FB]);
-    
-    res.send(graph_.describe());
+  // Vertices
+  const edge_vertices = [[A, B], [B, C], [C, D], [C, E], [E, B], [C, F], [F, B]];
+
+  // Add edges
+  graph_.addEdges(createEdges(edge_vertices));
+
+  res.send(graph_.describe());
 });
 // [END app]
