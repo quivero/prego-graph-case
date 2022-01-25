@@ -14,7 +14,7 @@
   "author": "@brunolnetto",
   "license": "MIT",
   "dependencies": {
-    "dot-quiver": "^4.4.0",
+    "dot-quiver": "^5.0.0",
     "es-iter": "^1.1.2",
     "express": "^4.17.2",
     "fs": "^0.0.2",
