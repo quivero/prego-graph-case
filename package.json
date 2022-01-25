@@ -6,6 +6,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon index.js",
+    "lint": "npx eslint .",
     "test": "echo \"Error: no test specified\" && exit 1",
     "update": "npm i -g npm-check-updates && ncu -u && npm update && git add . && git commit -m 'config/ package.json' && git push"
   },
@@ -17,5 +18,11 @@
     "express": "^4.17.2",
     "fs": "^0.0.1-security",
     "nodemon": "^2.0.15"
+  },
+  "devDependencies": {
+    "eslint": "^8.7.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-nibble": "^8.0.1",
+    "eslint-plugin-import": "^2.25.4"
   }
 }
