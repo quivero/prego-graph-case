@@ -14,6 +14,7 @@
   "author": "@brunolnetto",
   "license": "MIT",
   "dependencies": {
+    "@babel/core": "^7.17.2",
     "dot-quiver": "^5.0.0",
     "es-iter": "^1.1.2",
     "express": "^4.17.2",
