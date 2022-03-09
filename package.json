@@ -15,7 +15,7 @@
   "license": "MIT",
   "dependencies": {
     "@babel/core": "^7.17.5",
-    "dot-quiver": "^5.4.0",
+    "dot-quiver": "^5.5.0",
     "es-iter": "^1.1.2",
     "express": "^4.17.3",
     "fs": "^0.0.2",
