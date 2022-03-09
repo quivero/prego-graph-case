@@ -11,7 +11,7 @@ The result rendering depends of browser. Either browser choice, the result must 
 {
     "vertices":"A,B,C,D,E,F",
     "edges":"A_B,B_C,C_D,C_E,E_B,C_F,F_B",
-    "vertices_to_indices":{
+    "vertices_keys_to_indices":{
         "A":0,
         "B":1,
         "C":2,
@@ -32,7 +32,7 @@ The result rendering depends of browser. Either browser choice, the result must 
             5
         ],
         "3":[
-
+            
         ],
         "4":[
             1
@@ -47,6 +47,20 @@ The result rendering depends of browser. Either browser choice, the result must 
     "orphan_nodes":[
         0
     ],
+    "articulation_nodes":[
+        2,
+        1
+    ],
+    "bridges":[
+        [
+            2,
+            3
+        ],
+        [
+            0,
+            1
+        ]
+    ],
     "is_cyclic":true,
     "all_cycles":[
         [
@@ -59,6 +73,7 @@ The result rendering depends of browser. Either browser choice, the result must 
             2,
             5
         ]
-    ]
-}
-```
+    ],
+    "is_eulerian":false,
+    "is_connected":true
+}```
