@@ -14,15 +14,15 @@
   "author": "@brunolnetto",
   "license": "MIT",
   "dependencies": {
-    "@babel/core": "^7.17.2",
-    "dot-quiver": "^5.0.0",
+    "@babel/core": "^7.17.5",
+    "dot-quiver": "^5.4.0",
     "es-iter": "^1.1.2",
-    "express": "^4.17.2",
+    "express": "^4.17.3",
     "fs": "^0.0.2",
     "nodemon": "^2.0.15"
   },
   "devDependencies": {
-    "eslint": "^8.7.0",
+    "eslint": "^8.10.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-nibble": "^8.0.1",
     "eslint-plugin-import": "^2.25.4"
