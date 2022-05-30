@@ -41,10 +41,10 @@ The result rendering depends of browser. Either browser choice, the result must 
             1
         ]
     },
-    "loose_nodes":[
+    "sink_nodes":[
         3
     ],
-    "orphan_nodes":[
+    "source_nodes":[
         0
     ],
     "articulation_nodes":[
