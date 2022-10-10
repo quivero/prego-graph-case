@@ -1,6 +1,6 @@
-# Use case for Library ```dot-quiver```
+# Use case for Library ```quivero```
 
-This an use case of library [dot-quiver](https://github.com/dot-quiver/quivero-api). It is a NodeJS application. Hence, to start it, you might:
+This an use case of library [quivero](https://github.com/dot-quiver/quivero-api). It is a NodeJS application. Hence, to start it, you might:
 
 1. Run on command ```npm install && npm start```
 2. Type on URL field ```localhost:8080```
