@@ -2,9 +2,9 @@
 import express from 'express';
 import { createRequire } from 'module';
 
-import Graph from 'dot-quiver/data-structures/graph/Graph.js';
-import { createVertices } from 'dot-quiver/data-structures/graph/GraphVertex.js';
-import { createEdges } from 'dot-quiver/data-structures/graph/GraphEdge.js';
+import Graph from 'quivero-api/data-structures/graph/Graph.js';
+import { createVertices } from 'quivero-api/data-structures/graph/GraphVertex.js';
+import { createEdges } from 'quivero-api/data-structures/graph/GraphEdge.js';
 
 const require = createRequire(import.meta.url);
 const app = express();
