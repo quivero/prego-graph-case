@@ -1,4 +1,4 @@
-# Use case for Library ```prego```
+# Use case for library ```prego```
 
 This an use case of library [prego](https://github.com/quivero/prego). It is a NodeJS application. Hence, to start it, you might:
 
