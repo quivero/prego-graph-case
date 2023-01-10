@@ -1,4 +1,4 @@
-# Graph use case for library ```prego```
+# Graph use case for ```prego```
 
 This an use case of library [prego](https://github.com/quivero/prego). It is a NodeJS application. Hence, to start it, you might:
 
